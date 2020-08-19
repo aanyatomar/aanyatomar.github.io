@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<title> my portfolio </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+
+ * {
+  box-sizing: border-box; 
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.column img {
+  margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} 
+
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("protpic.png");
+  min-height: 100%;
+}
+
+.chanel {
+  display: none;
+
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="port.html" class="w3-button w3-block w3-black margin-top-10 ">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="talents.html" class="w3-button w3-block w3-black">MY TALENTS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="youtube.html" class="w3-button w3-block w3-black"> MY YOUTUBE CHANEL</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="contact.html" class="w3-button w3-block w3-black"> CONTACT ME</a>
+    </div>
+  </div> 
+</div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag" > <a href="https://www.youtube.com/channel/UCUVY6LkVOOxdTSd4_xrQntw?"> Visit My YouTube Chanel  </a> </span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Aanya Tomar</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text"> <a href="https://amazingbooks96945274.wordpress.com/"> Visit my Blog </span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-large">
+
+
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide"> ALL ABOUT ME </span></h5>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"God has given you only one face and you make yourself another.</i></p>
+      <p>William Shakespear</p>
+    </div>
+
+    There are millions of people in the world but how are we different from each other. Is it because of our size, clothes, houses, age or color. It is because of our personalities that define us and our uniqueness.
+
+Hi, My name is Aanya and I am 12 years old, living in Gurgaon India.
+
+I love reading books and sharing them on Amazing Books. I love making friends and playing with them. My favorite subject is math but I enjoy learning other subjects too. I am a trained Kathak dancer and very passionate about dancing.
+
+I love outdoor games and sports like basketball and my hobbies are playing tennis swimming and dancing. I even like indoor games like board games especially puzzles. It is my 5th year being a part of the student council member. I just travelling and every year I travel to at least two new places. I am ver yclose to my family and love them from the bottom of my heart.
+
+    <!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+  <img src="picc.png" style="width:100%">
+  
+  </div>
+  <div class="column">
+  <img src="20200111_132349.jpg" style="width:100%">
+  
+  </div>  
+  <div class="column">
+  <img src="20190103_104129.jpg" style="width:100%">
+  
+  </div>
+  <div class="column">
+  <img src="20200109_104616.jpg" style="width:100%">
+  
+  </div>
+</div>  
+
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
+
+
+
+
+
