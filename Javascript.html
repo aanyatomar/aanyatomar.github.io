@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> All about JavaScript </title>
+
+	<style type="text/css">
+
+#box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background: #14A76C;
+}
+#animation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #f5d442;
+  
+}		
+
+.container {
+  border-radius: 5px;
+  background-color: #454545;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+body {
+	background-color: #272727;
+}
+
+img {
+  top: 0px;
+  left: 0px;
+  width: 190px;
+  height: 130px;
+}
+
+div.absolute{
+  position: absolute;
+  top: 10px;
+  left: 160px;
+  width: 300px;
+  font-size: 50px;
+  color: #f5d442;
+  font-family: Impact;
+  }
+
+h1 {
+	font-family: impact;
+	color : #f5d442;
+}  
+
+h2 {
+	font-family: impact;
+	color : #14A76C;
+}  
+
+h3 {
+	font-family: impact;
+	color : #ff652f;
+}    
+
+p {
+	color: white; 
+} 
+
+</style>
+</head>
+
+<body>
+
+<img src= "javascript.png" width="150" height="150">
+
+<p>JavaScript is the programming language of HTML and the Web.
+JavaScript is easy to learn. And I will be explaining some concepts here. </p>
+
+<div class="absolute"> JAVASCRIPT LEARNING </div>
+
+<div class="container">
+
+	<h1>JavaScript Introduction</h1>
+
+	<p> JavaScript Can Change HTML Content.
+
+One of many JavaScript HTML methods is getElementById().
+
+This example uses the method to "find" an HTML element (with id="change") and changes the element content (innerHTML) to "Hello JavaScript":
+
+Example</p>
+
+<p id="change"> Hello! </p>
+
+<button type="button" onclick='document.getElementById("change").innerHTML = " Bye!"'>Click Me!</button>
+
+<h2> Javascript Examples: </h2>
+
+<h3> . </h3>
+
+<h3>JavaScript Functions</h3>
+
+<p>A JavaScript function is a block of code designed to perform a particular task.
+
+A JavaScript function is executed when "something" invokes it (calls it).</p>
+
+<p>This example calls a function which performs a calculation ( 4 times 3) , and returns the result:</p>
+
+<p id="calculation"></p>
+
+<script>
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+document.getElementById("calculation").innerHTML = myFunction(4, 3);
+</script>
+
+<h3> String Methods and Properties </h3>
+
+<p> Primitive values, like "John Doe", cannot have properties or methods (because they are not objects).
+
+But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.
+
+String Length
+The length property returns the length of a string: </p>
+
+<p>The length property returns the length of a string. String = ABCDEFGHIJKLMNOPQRSTUVWXYZ:</p>
+
+<p id="string"></p>
+
+<script>
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("string").innerHTML = txt.length;
+</script>
+
+<h3> JavaScript Arrays </h3>
+
+<p> An array is a special variable, which can hold more than one value at a time.
+
+If you have a list of items (a list of schools names, for example), storing the schools in single variables.
+
+However, what if you want to loop through the schools and find a specific one? And what if you had not 3 schools, but 300?
+
+The solution is an array!
+
+An array can hold many values under a single name, and you can access the values by referring to an index number. Array Example:
+
+<p id="Array"></p>
+
+<script>
+var schools = ["Lancers" ,   " Pathways",  " DPS"];
+document.getElementById("Array").innerHTML = schools;
+</script>
+
+
+<h3> Javascript For Loops </h3>
+
+<p> Loops can execute a block of code a number of times.
+
+JavaScript Loops
+Loops are handy, if you want to run the same code over and over again, each time with a different value.
+
+Often this is the case when working with arrays: Example numbers till 5: </p>
+
+<p id="1-20"></p>
+
+<script>
+var text = "";
+var a;
+for (a = 1; a < 6; a++) { text += " number  " + a + "<br>"; }
+
+document.getElementById("1-20").innerHTML = text;
+</script>
+
+<h3>JavaScript if else and else if </h3>
+<p>Conditional statements are used to perform different actions based on different conditions. Conditional Statements
+Very often when you write code, you want to perform different actions for different decisions.
+
+You can use conditional statements in your code to do this.
+
+In JavaScript we have the following conditional statements:
+
+-Use if to specify a block of code to be executed, if a specified condition is true
+-Use else to specify a block of code to be executed, if the same condition is false
+-Use else if to specify a new condition to test, if the first condition is false
+-Use switch to specify many alternative blocks of code to be executed. Example- Age more than 18 you are eligible for driving. Age entered 14  </p>
+
+<script>
+		var age= 14
+if (age >   18){
+	document.write("you are eligible for driving" )
+}
+
+else{
+	document.write(" you are not eligible for driving ")
+}
+</script>
+
+<h3>JavaScript HTML DOM Animation</h3>
+<p>Animation Code
+JavaScript animations are done by programming gradual changes in an element's style.
+
+The changes are called by a timer. When the timer interval is small, the animation looks continuous.
+
+The basic code is. Example- Create the Animation Using JavaScript</p>
+
+<p><button onclick="Moving()">Click Me</button></p> 
+
+<div id ="box">
+  <div id ="animation"></div>
+</div>
+<script>
+function Moving() {
+  var elem = document.getElementById("animation");  
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 150) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+}
+</script>
+
+
+<H2> Thank you for reading, that's all! </H2>
+
+
+
+
+</div>
+</body>
+</html>
+
+
+    

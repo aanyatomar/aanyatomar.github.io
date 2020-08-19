@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	.Clock{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+    transform: translateX (-50%)
+
+  color: #00ff51;
+    font-size: 60px;
+  font-family: Arial;
+   letter spacing: 7px; 
+   </style>
+
+</head>
+
+<body>
+
+ <div id="MyClock" class="Clock" 
+     onload= "showtime()">
+
+     <script type="text/javascript">
+       
+       function showtime(){
+  var date = new Date();
+  var h = date.getHours();
+  var m = date.getMinutes();
+  var s = date.getSeconds();
+  var session = "AM"
+  
+
+if (h == 0) {  
+  h = 12;
+  }
+
+if (h < 0) {
+ h = h - 12;
+  session = "PM"
+}
+
+h = (h < 10) ? "0" + h : h;
+m = (m < 10) ? "0" + m : m;
+s = (s < 10) ? "0" + s : s;
+
+var Time = h + ":" + m + ":" + s + " " + session; 
+
+document.getElementById( "MyClock").innerText = Time; 
+
+document.getElementById( "MyClock").textContent = Time; 
+
+setTimeout(showtime,1000);
+
+}
+
+showtime();
+
+</script>
+
+     </div>
+
+</body>
+</html>
